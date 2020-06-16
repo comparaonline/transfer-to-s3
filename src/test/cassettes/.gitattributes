@@ -1,0 +1,4 @@
+# Git will normalize line endings from \r\n to \n on text files, that's why
+# we set the json files in this directory to binary to prevent errors with
+# QuoteApp output
+*.json binary
