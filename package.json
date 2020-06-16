@@ -1,0 +1,52 @@
+{
+  "name": "@comparaonline/transfer-to-s3",
+  "version": "1.7.0",
+  "description": "Contains utilities to make easier to integrate with doc generator",
+  "repository": "comparaonline/transfer-to-s3",
+  "author": {
+    "name": "Ezequiel Rabinovich",
+    "email": "erabinovich@comparaonline.com"
+  },
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "files": [
+    "build"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "tslint": "tslint -c tslint.json -p tsconfig.json",
+    "pretest": "yarn tslint",
+    "compile": "tsc",
+    "prepublishOnly": "yarn compile",
+    "clean": "rm -rf build/*",
+    "test": "jest",
+    "test:fast": "jest",
+    "coverage": "jest --coverage"
+  },
+  "keywords": [
+    "comparaonline"
+  ],
+  "dependencies": {
+    "@comparaonline/backoff": "^1.0.0",
+    "aws-sdk": "^2.698.0",
+    "axios": "^0.19.2",
+    "rxjs": "^6.5.5"
+  },
+  "devDependencies": {
+    "@types/aws-sdk": "^2.7.0",
+    "@types/jest": "^24.0.19",
+    "@types/nock": "^11.1.0",
+    "jest": "^24.9.0",
+    "nock": "^11.4.0",
+    "nodemon": "^1.19.3",
+    "ts-jest": "^24.1.0",
+    "ts-node": "^8.4.1",
+    "tslint": "^5.20.0",
+    "tslint-config-airbnb": "^5.11.2",
+    "typescript": "^3.6.4"
+  }
+}
